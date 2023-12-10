@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Home page -->
+    <section class="sub-header">
+      <nav>
+        <h1><a href="index.html">Welcome</a></h1>
+        <div class="nav-links" >
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact_us.html">Contact US</a></li>
+           </ul>
+        </div>
+        <div class="toggle-btn">
+          <!-- <i class="fa-solid fa-bars" onclick=showMenu()></i> -->
+        </div>
+      </nav>
+
+      <div class="dropdown-menu" id="toggleBtn">
+        <!-- <i class="fa-solid fa-xmark" onclick=hideMenu()></i> -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact_us.html">Contact US</a></li>
+      </div>
+
+   
+    
+    <!-- Contact us -->
+    <div class="container-form">
+
+      <div class="container">
+        <div class="main">
+          
+          <div class="left">
+            <h1>
+              Contact Us
+            </h1>
+             <p>Need to get in touch with us? Either fil out the form with your inquiry or find the email you'd like to contact.
+             </p>
+          </div>
+          <div class="right">
+            
+            <form  class="form">
+              
+              <input id="name" type="text" name="name" placeholder="Enter Your Name">
+              <input id="email" type="text" name="name" placeholder="Enter Your Email">
+              <textarea id="msg" name="message" placeholder="Your message"></textarea>
+              <button onclick="SendEmail()" id="submit" type="submit" class="btn">Send</button>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+      
+
+
+    </section>
+
+    <section class="footer-c"> 
+      <div class="social">
+        <a href="https://www.instagram.com/invites/contact/?i=qdc4z604k0hi&utm_content=2ghs02t"><i class="fa fa-instagram"></i></a>
+        <a href="https://github.com/shreyansh1211"><i class="fa fa-github"></i></a>
+        <a href="https://wa.link/0l5s5u"><i class="fa fa-whatsapp"></i></a>
+        <a href="https://www.snapchat.com/add/iamshreyansh22?share_id=VpZS2AM9z1o&locale=en-IN"><i class="fa fa-snapchat"></i></a>
+      </div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact_us.html">Contact US</a></li>
+   </ul>
+   <div class="copyright">
+      <p>Shreyansh Sathwara @ 2023</p>
+   </div>
+
+    </section>
+
+    
+
+
+<!-- java script -->
+
+<!-- CDN link toggle btn -->
+    <script src="https://kit.fontawesome.com/f0a3a94859.js" crossorigin="anonymous"></script>
+<!-- toggle menu -->
+<script>
+
+  function showMenu(){
+    const sidebar = document.querySelector('.dropdown-menu')
+    sidebar.style.height = '100vh'
+  }
+
+  function hideMenu(){
+    const sidebar = document.querySelector('.dropdown-menu')
+    sidebar.style.height = '0'
+  }
+
+
+// Mail Send
+
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const msg = document.getElementById("msg");
+const submit = document.getElementsByClassName("form")[0];
+
+submit.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  console.log("clicked")
+
+  let ebody =`
+    <b>Name: </b>${name.value}
+    <br>
+    <b>Email: </b>${email.value}
+    <br>
+    <b>Message: </b>${msg.value}
+    <br>
+  `
+
+  Email.send({
+    SecureToken : "bb9b760c-e0f2-4bda-bbb8-4ff5bd022400",
+    To : 'shreyansh1254@gmail.com',
+    From : "shreyansh1254@gmail.com",
+    Subject : "Welcome email from " + email.value,
+    Body : ebody
+}).then(
+  message => alert(message)
+);
+});
+
+
+ 
+
+</script>
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+</body>
+</html>

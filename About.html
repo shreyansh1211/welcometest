@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Home page -->
+    <section class="a-header">
+      <nav>
+        <h1><a href="index.html">Welcome</a></h1>
+        <div class="nav-links" >
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact_us.html">Contact US</a></li>
+           </ul>
+        </div>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars" onclick=showMenu()></i>
+        </div>
+      </nav>
+      <h2>About Us</h2>
+
+      <div class="dropdown-menu" id="toggleBtn">
+        <i class="fa-solid fa-xmark" onclick=hideMenu()></i>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact_us.html">Contact US</a></li>
+      </div>
+
+      
+    </section>
+
+    <!-- about contant -->
+
+    <section class="about-us">
+
+      <div class="row">
+        <div class="about-col">
+          <h1>We are the Best</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab debitis fugit delectus mollitia? Placeat maiores quo, reiciendis quidem ipsum veritatis in nemo esse consequuntur nisi. Animi veniam repudiandae atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga cupiditate perferendis consectetur et laudantium modi fugit illo, nulla molestiae quod dolor, optio voluptatum accusantium officiis placeat adipisci. In, omnis repellendus!</p>
+
+          <a href="index.html"><button class="button">EXPLORE NOW</button></a>
+        </div>
+
+        <div class="about-col">
+          <img src="about us.jpg" alt="">
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </section>
+
+  <section class="footer-c"> 
+    <div class="social">
+      <a href="https://www.instagram.com/invites/contact/?i=qdc4z604k0hi&utm_content=2ghs02t"><i class="fa fa-instagram"></i></a>
+      <a href="https://github.com/shreyansh1211"><i class="fa fa-github"></i></a>
+      <a href="https://wa.link/0l5s5u"><i class="fa fa-whatsapp"></i></a>
+      <a href="https://www.snapchat.com/add/iamshreyansh22?share_id=VpZS2AM9z1o&locale=en-IN"><i class="fa fa-snapchat"></i></a>
+    </div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="contact_us.html">Contact US</a></li>
+ </ul>
+ <div class="copyright">
+    <p>Shreyansh Sathwara @ 2023</p>
+ </div>
+
+  </section>
+
+
+    
+
+
+<!-- java script -->
+
+<!-- CDN link toggle btn -->
+    <script src="https://kit.fontawesome.com/f0a3a94859.js" crossorigin="anonymous"></script>
+<!-- toggle menu -->
+<script>
+
+  function showMenu(){
+    const sidebar = document.querySelector('.dropdown-menu')
+    sidebar.style.height = '100vh'
+  }
+
+  function hideMenu(){
+    const sidebar = document.querySelector('.dropdown-menu')
+    sidebar.style.height = '0'
+  }
+
+</script>
+
+</body>
+</html>

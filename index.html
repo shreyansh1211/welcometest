@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Home page -->
+    <section class="header">
+      <nav>
+        <h1><a href="index.html">Welcome</a></h1>
+        <div class="nav-links" >
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact_us.html">Contact US</a></li>
+           </ul>
+        </div>
+        <div class="toggle-btn">
+          <i class="fa-solid fa-bars" onclick=showMenu()></i>
+        </div>
+      </nav>
+
+      <div class="dropdown-menu" id="toggleBtn">
+        <i class="fa-solid fa-xmark" onclick=hideMenu()></i>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="contact_us.html">Contact US</a></li>
+      </div>
+      <!-- hero section -->
+      <div class="text-box">
+      <h2 data-text="Welcome...">Welcome...</h2>
+       <h1>Structural Engineers <span>actually</span><br><span>focused</span> on your results </h1>
+       <br>      
+        <p>Creat your own Dream.</p>
+        <a href="contact_us.html"><button class="button">Contact US</button></a>
+      </div>
+
+      
+    </section>
+
+    <!-- <section class="footer"> 
+      <div class="social">
+        <a href=""><i class=""></i></a>
+        <a href=""><i class=""></i></a>
+        <a href=""><i class=""></i></a>
+        <a href=""><i class=""></i></a>
+        <a href=""><i class=""></i></a>
+      </div>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="contact_us.html">Contact US</a></li>
+   </ul>
+   <div class="copyright">
+      <p>Shreyansh Sathwara @ 2023</p>
+   </div>
+
+    </section> -->
+
+    
+
+
+<!-- java script -->
+
+<!-- CDN link toggle btn -->
+    <script src="https://kit.fontawesome.com/f0a3a94859.js" crossorigin="anonymous"></script>
+<!-- toggle menu -->
+<script>
+
+  function showMenu(){
+    const sidebar = document.querySelector('.dropdown-menu')
+    sidebar.style.height = '100vh'
+  }
+
+  function hideMenu(){
+    const sidebar = document.querySelector('.dropdown-menu')
+    sidebar.style.height = '0'
+  }
+
+</script>
+
+</body>
+</html>
